@@ -53,7 +53,7 @@ nav a.active {
 
 /* Ensure spacers take equal space */
 .spacer {
-    flex: 0.43;
+    flex: 0.46;
 }
 
 .main-button {
