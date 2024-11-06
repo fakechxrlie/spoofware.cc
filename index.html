@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,20 +24,18 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#status">Status</a></li>
-            <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
         </ul>
         <div class="spacer"></div>  <!-- Space filler -->
     </nav>
 </header>
 
+<section id="home" class="title-screen">
+    <h1><span>spoof</span><span class="highlight">ware</span><span>.cc</span></h1>
+    <p>Your ultimate tool for randomizing hardware identifiers.</p>
+</section>
 
-    <section id="home" class="title-screen">
-        <h1><span>spoof</span><span class="highlight">ware</span><span>.cc</span></h1>
-        <p>Your ultimate tool for randomizing hardware identifiers.</p>
-    </section>
-
-  <section id="status">
+<section id="status">
     <h2 class="section-title">Status</h2>
     <div class="status-container">
         <div class="status-box">
@@ -86,51 +82,14 @@
                 <li><span class="checkmark">✓</span> Call of Duty: MWII</li>
                 <li><span class="checkmark">✓</span> Call of Duty: MWIII</li>
                 <li><span class="checkmark">✓</span> Call of Duty: Vangaurd</li>
-                <li><span class="checkmark">✓</span> Call of Duty: Warzone 2.0</li>                       <li><span class="checkmark">✓</span> Call of Duty: Black Ops 6</li>
+                <li><span class="checkmark">✓</span> Call of Duty: Warzone 2.0</li>
+                <li><span class="checkmark">✓</span> Call of Duty: Black Ops 6</li>
             </ul>
         </div>
     </div>
 </section>
 
-
-  
-    <section id="features">
-        <h2 class="section-title">Features</h2>
-        <div class="features-container">
-            <div class="feature-box">
-                <h3>Feature 1</h3>
-                <img src="icon1.png" alt="Icon 1" class="feature-icon"> 
-                <div class="feature-description">This is a description for Feature 1.</div>
-            </div>
-            <div class="feature-box">
-                <h3>Feature 2</h3>
-                <img src="icon2.png" alt="Icon 2" class="feature-icon"> 
-                <div class="feature-description">This is a description for Feature 2.</div>
-            </div>
-            <div class="feature-box">
-                <h3>BIOS Spoofing</h3>
-                <img src="https://i.ibb.co/85fg1HT/bios-1.png" alt="BIOSIcon" class="feature-icon"> 
-                <div class="feature-description">We hide information about your BIOS that could be used to keep you banned from any games.</div>
-            </div>
-            <div class="feature-box">
-                <h3>Feature 4</h3>
-                <img src="icon4.png" alt="Icon 4" class="feature-icon"> 
-                <div class="feature-description">This is a description for Feature 4.</div>
-            </div>
-            <div class="feature-box">
-                <h3>Feature 5</h3>
-                <img src="icon5.png" alt="Icon 5" class="feature-icon"> 
-                <div class="feature-description">This is a description for Feature 5.</div>
-            </div>
-            <div class="feature-box">
-                <h3>Feature 6</h3>
-                <img src="icon6.png" alt="Icon 6" class="feature-icon"> 
-                <div class="feature-description">This is a description for Feature 6.</div>
-            </div>
-        </div>
-    </section>
-
-  <section id="pricing">
+<section id="pricing">
     <h2 class="section-title">Pricing Plans</h2>
     <div class="pricing-table">
         <div class="table">
@@ -192,44 +151,38 @@
     </div>
 </section> 
 
+<footer>
+    <p>Our Links</p>
+    <div class="socials">
+        <a href="#">Discord</a>
+        <a href="#">Shop</a>
+        <a href="#">EPVP</a>
+    </div>
+    <p>&copy; 2024 spoofware.cc. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>Our Links</p>
-        <div class="socials">
-            <a href="#">Discord</a>
-            <a href="#">Shop</a>
-            <a href="#">EPVP</a>
-        </div>
-        <p>&copy; 2024 spoofware.cc. All rights reserved.</p>
-    </footer>
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-    <script>
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+        let current = '';
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
         });
-    </script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
 
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
