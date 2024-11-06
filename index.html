@@ -94,7 +94,10 @@
     <div class="pricing-table">
         <div class="table">
             <h3>Basic One-time</h3>
-            <div class="price">$4.99</div>
+            <div class="price">
+                <span class="original-price">$9.99</span> <!-- Original Price with strikethrough -->
+                <span class="discounted-price">$4.99</span> <!-- Discounted Price -->
+            </div>
             <ul>
                 <li><span class="checkmark">✓</span> Permanent</li>
                 <li><span class="checkmark">✓</span> CPU</li>
@@ -108,7 +111,10 @@
         </div>
         <div class="table">
             <h3>Basic Lifetime</h3>
-            <div class="price">$29.99</div>
+            <div class="price">
+                <span class="original-price">$59.99</span> <!-- Original Price with strikethrough -->
+                <span class="discounted-price">$29.99</span> <!-- Discounted Price -->
+            </div>
             <ul>
                 <li><span class="checkmark">✓</span> Permanent</li>
                 <li><span class="checkmark">✓</span> CPU</li>
@@ -120,9 +126,11 @@
             </ul>
             <button>Buy Now</button>
         </div>
-       <div class="table">
+        <div class="table">
             <h3>Valorant</h3>
-            <div class="price">SOON</div>
+            <div class="price">
+                <span class="original-price">COMING SOON</span>
+            </div>
             <ul>
                 <li><span class="checkmark">✓</span> Permanent</li>
                 <li><span class="checkmark">✓</span> CPU</li>
@@ -134,9 +142,12 @@
             </ul>
             <button>Buy Now</button>
         </div>
-      <div class="table">
-            <h3>Temp Liftime</h3>
-            <div class="price">$149.99</div>
+        <div class="table">
+            <h3>Temp Lifetime</h3>
+            <div class="price">
+                <span class="original-price">$199.99</span> <!-- Original Price with strikethrough -->
+                <span class="discounted-price">$149.99</span> <!-- Discounted Price -->
+            </div>
             <ul>
                 <li><span class="checkmark">✓</span> Permanent</li>
                 <li><span class="checkmark">✓</span> CPU</li>
@@ -149,7 +160,30 @@
             <button>Buy Now</button>
         </div>
     </div>
-</section> 
+</section>
+
+
+  <style>
+    .price {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;  /* Lighter color for original price */
+    font-size: 0.9em;
+}
+
+.discounted-price {
+    color: #f79fff;  /* Highlight color for the discounted price */
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+  </style>
 
 <footer>
     <p>Our Links</p>
